@@ -19,6 +19,8 @@
 		711A50D119388277005642EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711A50B919388277005642EF /* UIKit.framework */; };
 		711A50D919388277005642EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 711A50D719388277005642EF /* InfoPlist.strings */; };
 		711A50DB19388277005642EF /* EntriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 711A50DA19388277005642EF /* EntriesTests.m */; };
+		E742398119CDA04E005A2407 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = E742398019CDA04E005A2407 /* EntryController.m */; };
+		E742398419CDA18D005A2407 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = E742398319CDA18D005A2407 /* Entry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		711A50D619388277005642EF /* EntriesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EntriesTests-Info.plist"; sourceTree = "<group>"; };
 		711A50D819388277005642EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		711A50DA19388277005642EF /* EntriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntriesTests.m; sourceTree = "<group>"; };
+		E742397F19CDA04E005A2407 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		E742398019CDA04E005A2407 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
+		E742398219CDA18D005A2407 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		E742398319CDA18D005A2407 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,10 @@
 			children = (
 				711A50C419388277005642EF /* ESAppDelegate.h */,
 				711A50C519388277005642EF /* ESAppDelegate.m */,
+				E742397F19CDA04E005A2407 /* EntryController.h */,
+				E742398019CDA04E005A2407 /* EntryController.m */,
+				E742398219CDA18D005A2407 /* Entry.h */,
+				E742398319CDA18D005A2407 /* Entry.m */,
 				711A50C719388277005642EF /* Images.xcassets */,
 				711A50BC19388277005642EF /* Supporting Files */,
 			);
@@ -240,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E742398419CDA18D005A2407 /* Entry.m in Sources */,
 				711A50C619388277005642EF /* ESAppDelegate.m in Sources */,
 				711A50C219388277005642EF /* main.m in Sources */,
+				E742398119CDA04E005A2407 /* EntryController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +450,7 @@
 				711A50E019388277005642EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		711A50E119388277005642EF /* Build configuration list for PBXNativeTarget "EntriesTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +459,7 @@
 				711A50E319388277005642EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
