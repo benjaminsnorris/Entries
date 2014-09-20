@@ -69,11 +69,20 @@
 
 - (void)loadFromDefaults {
     NSArray *entryDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:entryListKey];
-    self.entries = entryDictionaries;
+    NSMutableArray *entries = [NSMutableArray new];
+    for (NSDictionary *dictionary in entryDictionaries) {
+        Entry *entry = [[Entry alloc] initWithDictionary:dictionary];
+        [entries addObject:entry];
+    }
+    self.entries = entries;
 }
 
 - (void)synchronize {
-    [[NSUserDefaults standardUserDefaults] setObject:self.entries forKey:entryListKey];
+    NSMutableArray *entryDictionaries = [NSMutableArray new];
+    for (Entry *entry in self.entries) {
+        [entryDictionaries addObject:[entry entryDictionary]];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:entryDictionaries forKey:entryListKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
